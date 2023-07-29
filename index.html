@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>News App</title>
+    <link rel="shortcut icon" href="./images/favicon-32x32.png">
+    
+</head>
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img class="company_logo" src="./images/logo.jpg" alt="company logo" style="height: 90px ;" >
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('technology')">Technology</li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('entertainment')">Entertainment</li>
+                </ul>
+            </div>
+            
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g. Science">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+            <div class="note_taking">
+                <button class="note_button hover-link nav-item" id="openNote" onclick="onTakeNoteClick">Take Note</button>
+            </div>
+            <div class="time"></div>
+        </div>
+    </nav>
+    
+
+    <main>
+              
+        <div class="note-container" id="note-container">
+            <h1 class="heading">Welcome to your Notes </h1>
+            <hr>
+            <div class="input">
+                <div class="card-body">
+                    <div class="notes-box-head">
+                    <h2 class="card-title">Add Note</h2>
+                    <i class="close" id="close-note">+</i>
+                    </div>
+                    <div >
+                        <input class="form-title" placeholder="Note Title "  id="title"/>
+                    </div>
+                    
+                    <div>
+                        <textarea class="form-control" rows="5" id="addTxt"></textarea>
+                    </div>
+                    <button href="#" class="primary-btn" id="addBtn">Add Note</button>
+                </div>
+            </div>
+    
+            <h1 class="notes-heading">Your Notes</h1>
+            <hr>
+            <div id="notes" class="output-container"> </div>
+        </div>
+    
+        <div class="cards-container container flex" id="cards-container">
+            
+        </div>
+  
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html> 
